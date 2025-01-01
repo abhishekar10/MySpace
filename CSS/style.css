@@ -18,6 +18,7 @@ body {
 
 #welcome-sign {
     margin-left: 2rem;
+    width: 20%;
 }
 
 #welcome-message {
@@ -26,15 +27,24 @@ body {
 
 #main-clock {
     font-size: 7rem;
-    font-weight : bolder
+    font-weight : bolder;
+    line-height: 1;
 }
 
 .splitter {
     margin: 2rem;
+    margin-bottom: 0%;
     width: 0.4rem;
     background-color: white;
 }
 
+.timezones {
+    margin-top: 2rem;
+}
+
 .timezone {
+    display: flex;
+    align-items: center;
     height: 50%;
+    font-size: 2rem;
 }

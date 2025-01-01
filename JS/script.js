@@ -1,14 +1,6 @@
 let userName = "Ram";
 let welcomeSign = document.getElementById("welcome-sign")
 
-caller = () => {setTimeout(() => {
-    let seconds = new Date().getSeconds();
-    if(seconds == 0) {
-        setClock();
-    }
-    caller();
-},1000)}
-
 const setMessage = () => {
     const now = new Date();
     let hours = now.getHours();
@@ -34,10 +26,42 @@ const setTimezones = () => {
     let gmt = document.getElementById("gmt");
     let est = document.getElementById("est");
     const now = new Date();
-    gmt.innerText = now.toLocaleString('en-US', { timeZone: 'GMT' });
+    const gmtDateTime = now.toLocaleString('en-US', { 
+        timeZone: 'GMT', 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit', 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: false
+      });
+    
+      const estDateTime = now.toLocaleString('en-US', { 
+        timeZone: 'America/New_York', 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit', 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: false
+      });
+    gmt.innerText = gmtDateTime + " , United Kingdom";
+    est.innerText = estDateTime + " , United States";
 }
 
-//Below calls yet to be automated
+caller = () => {setTimeout(() => {
+    let seconds = new Date().getSeconds();
+    if(seconds == 0) {
+        setClock();
+        setTimezones();
+        let minutes = new Date().getMinutes();
+        if (minutes === 0) {
+            setMessage();
+        }
+    }
+    caller();
+},1000)}
+
 caller();
 setMessage();
 setClock();
