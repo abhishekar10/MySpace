@@ -12,3 +12,29 @@ body {
     background-repeat: no-repeat;
 }
 
+.main-container {
+    display : flex ;
+}
+
+#welcome-sign {
+    margin-left: 2rem;
+}
+
+#welcome-message {
+    margin-top: 2rem;
+}
+
+#main-clock {
+    font-size: 7rem;
+    font-weight : bolder
+}
+
+.splitter {
+    margin: 2rem;
+    width: 0.4rem;
+    background-color: white;
+}
+
+.timezone {
+    height: 50%;
+}
