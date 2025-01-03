@@ -11,16 +11,27 @@
 </head>
 <body>
     <div class="main-container">
-        <div id="welcome-sign">
-            <h1 id="welcome-message"></h1>
-            <div id="main-clock"></div>
+        <div class="head">
+            <div id="welcome-sign">
+                <h1 id="welcome-message"></h1>
+                <div id="main-clock"></div>
+            </div>
+            <div class="splitter"></div>
+            <div class="timezones">
+                <div id="gmt" class="timezone"></div>
+                <div id="est" class="timezone"></div>
+            </div>
+            <div class="splitter"></div>
+            <div class="climate">
+                <div id="message1">
+                    <div class="loader"></div>
+                    <div class="get-info-message">Getting Location and Weather Info..</div>
+                </div>
+                <div id="message2"></div>
+                <div id="message3"></div>
+            </div>
         </div>
-        <div class="splitter"></div>
-        <div class="timezones">
-            <div id="gmt" class="timezone"></div>
-            <div id="est" class="timezone"></div>
-        </div>
-        <div class="splitter"></div>
+        <div class="music-locker"></div>
     </div>
     <script src="JS/script.js"></script>
     <script src="JS/weather.js"></script>

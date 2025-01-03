@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.main-container {
+.head {
     display : flex ;
 }
 
@@ -47,4 +47,50 @@ body {
     align-items: center;
     height: 50%;
     font-size: 2rem;
+}
+
+.climate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border-top: 0.5rem solid white;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    animation: load 1.25s ease infinite;
+}
+
+.get-info-message {
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+.hide-element {
+    display: none;
+}
+
+.music-locker {
+    background-color: white;
+    opacity: 0.4;
+    margin: 2rem;
+    border-radius: 10px;
+    height: 100px;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
 }
