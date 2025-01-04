@@ -10,10 +10,22 @@ body {
     background-image: url(image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .head {
     display : flex ;
+    flex-shrink: 0;
+    height: auto;
 }
 
 #welcome-sign {
@@ -83,7 +95,8 @@ body {
     opacity: 0.4;
     margin: 2rem;
     border-radius: 10px;
-    height: 100px;
+    position: relative;
+    flex: 1;
 }
 
 @keyframes load {
