@@ -1,6 +1,6 @@
 addFolderButton = document.querySelector(".upload-music p");
 initialState = document.querySelector(".upload-music");
-const player = document.getElementById("player");
+const player = document.querySelector(".player");
 const musicList = document.getElementById("music-list");
 const playPauseBtn = document.getElementById("play-pause-btn");
 const progressBar = document.getElementById("progress-bar");
