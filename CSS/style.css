@@ -85,11 +85,6 @@ body {
     font-size: 1rem;
     margin: 2rem;
 }
-
-.hide-element {
-    display: none;
-}
-
 .music-locker {
     background-color: white;
     margin: 2rem;
@@ -111,8 +106,48 @@ body {
     width: 97%;
     border-radius: 10px;
     opacity: 0.8;
-    color: black;
     font-size: 2rem;
+    background-color: black;
+}
+
+.upload-music p {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 97%;
+    opacity: 0.8;
+    font-size: 2rem;
+}
+
+.left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 90%;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67%;
+    margin: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 90%;
+}
+
+.hide-element {
+    display: none;
 }
 
 @keyframes load {
