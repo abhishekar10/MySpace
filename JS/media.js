@@ -25,7 +25,6 @@ addFolderButton.addEventListener("click", () => {
             loadTracks(tracks);
             initialState.classList.add("hide-element");
             player.classList.remove("hide-element");
-            console.log(addFolderButton);
         }
     });
 
@@ -38,13 +37,13 @@ function loadTracks(tracks) {
         const listItem = document.createElement("li");
         let trackName = track.name;
         listItem.textContent = trackName.substring(0,trackName.length - 4);
-        listItem.addEventListener("click", () => playTrack(index));
+        listItem.addEventListener("click", () => playTrack(index,tracks.length));
         musicList.appendChild(listItem);
     });
-    playTrack(0);
+    playTrack(0,tracks.length);
 }
 
-function playTrack(index) {
+function playTrack(index, trackLength) {
     const track = tracks[index];
     if (!track) return;
 
@@ -65,7 +64,9 @@ function playTrack(index) {
         progressBar.value = Math.floor(audio.currentTime);
         currentTimeEl.textContent = formatTime(audio.currentTime);
         if(audio.currentTime === audio.duration) {
-            playTrack(currentTrackIndex + 1);
+            if( currentTrackIndex + 1 === trackLength) {
+                playTrack(0);
+            } else playTrack(currentTrackIndex + 1);
         }
     });
 }
