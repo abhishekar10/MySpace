@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MySpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href=
 'https://fonts.googleapis.com/css?family=Poppins'
         rel='stylesheet' />
@@ -38,10 +39,14 @@
             <div class="player hide-element">
                 <div class="left-section">
                     <div class="controls">
-                        <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
-                        <span id="current-time">00:00</span>
-                        <input type="range" id="progress-bar" value="0" min="0" max="100">
-                        <span id="duration">00:00</span>
+                        <div class="music-info">
+                            <span id="current-time">00:00</span>
+                            <span id="duration">00:00</span>
+                            <input type="range" id="progress-bar" value="0" min="0" max="100">
+                        </div>
+                        <div class="button-controller">   
+                            <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                        </div>
                     </div>
                 </div>
                 <div class="right-section">

@@ -118,17 +118,16 @@ body {
 .player {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 90%;
     width: 97%;
     opacity: 0.8;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .left-section {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30%;
     margin: 2rem;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -182,6 +181,7 @@ body {
 }
 
 .left-section #play-pause-btn {
+    border-radius: 50%;
     background-color: white;
     color: rgb(56, 56, 56);
     font-weight: bold;
@@ -215,13 +215,17 @@ li {
 }
 
 li:hover {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     color: black;
 }
 
 .hide-element {
     display: none;
+}
+
+i {
+    color: #1a1a1a;
 }
 
 @keyframes load {

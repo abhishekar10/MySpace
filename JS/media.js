@@ -52,7 +52,7 @@ function playTrack(index, trackLength) {
     audio.src = objectURL;
     audio.load();
     audio.play();
-    playPauseBtn.textContent = "Pause";
+    playPauseBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
     isPlaying = true;
 
     audio.addEventListener("loadedmetadata", () => {
@@ -77,7 +77,7 @@ playPauseBtn.addEventListener("click", () => {
         playPauseBtn.innerHTML = `<i class="fa-solid fa-play"></i>`;
     } else {
         audio.play();
-        playPauseBtn.textContent = `<i class="fa-solid fa-pause"></i>`;
+        playPauseBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
     }
     isPlaying = !isPlaying;
 });
