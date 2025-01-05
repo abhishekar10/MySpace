@@ -74,10 +74,10 @@ function playTrack(index, trackLength) {
 playPauseBtn.addEventListener("click", () => {
     if (isPlaying) {
         audio.pause();
-        playPauseBtn.textContent = "Play";
+        playPauseBtn.innerHTML = `<i class="fa-solid fa-play"></i>`;
     } else {
         audio.play();
-        playPauseBtn.textContent = "Pause";
+        playPauseBtn.textContent = `<i class="fa-solid fa-pause"></i>`;
     }
     isPlaying = !isPlaying;
 });

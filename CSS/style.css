@@ -130,10 +130,63 @@ body {
     align-items: center;
     width: 30%;
     margin: 2rem;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     border-radius: 10px;
     height: 90%;
+    background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    color: white;
+    overflow: hidden;
 }
+
+.left-section button,
+.left-section input[type="range"] {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.left-section button:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7), -3px -3px 10px rgba(255, 255, 255, 0.2);
+}
+
+.left-section #progress-bar {
+    width: 90%;
+    height: 0.5rem;
+    background-color: #555;
+    border-radius: 5px;
+    appearance: none;
+}
+
+.left-section #progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left-section p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.left-section #play-pause-btn {
+    background-color: white;
+    color: rgb(56, 56, 56);
+    font-weight: bold;
+}
+
 
 .right-section {
     display: flex;
@@ -147,6 +200,7 @@ body {
     height: 90%;
     overflow-y: auto;
     background-color: black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(255, 255, 255, 0.1);
 }
 
 li {
