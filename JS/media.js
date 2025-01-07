@@ -82,7 +82,6 @@ playPauseBtn.addEventListener("click", () => {
     isPlaying = !isPlaying;
 });
 
-
 progressBar.addEventListener("input", () => {
     audio.currentTime = progressBar.value;
 });
